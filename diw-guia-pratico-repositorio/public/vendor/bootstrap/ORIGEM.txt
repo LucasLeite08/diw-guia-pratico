@@ -1,0 +1,4 @@
+Bootstrap 5.3.6 — https://getbootstrap.com/
+CSS e bundle JavaScript compilados e minificados, usados localmente.
+Licença MIT: https://github.com/twbs/bootstrap/blob/main/LICENSE
+Copyright (c) 2011-2025 The Bootstrap Authors.

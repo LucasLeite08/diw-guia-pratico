@@ -1,0 +1,60 @@
+    <!doctype html>
+    <html lang="pt-BR">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Projeto didático de DIW: Bootstrap, Fetch API e JSON Server">
+      <title>Votação | Som na Final</title>
+      <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <script src="vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+      <script src="js/api.js" defer></script>
+      <script src="js/ui.js" defer></script>
+      <script src="js/votacao.js" defer></script>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">🎵 SOM NA FINAL</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link "  href="index.html">Início</a>
+        <a class="nav-link active" aria-current="page" href="votacao.html">Votar</a>
+        <a class="nav-link "  href="resultado.html">Resultado</a>
+        <a class="nav-link "  href="admin.html">CRUD extra</a>
+      </div>
+    </div>
+  </div>
+</nav>
+      <div class="site-stripe"></div>
+
+<main class="container py-5">
+  <div class="page-heading mb-4">
+    <span class="eyebrow">VOTAÇÃO</span>
+    <h1 class="display-6 fw-bold">Vote para eliminar</h1>
+    <p class="text-secondary">Clique em um participante. Cada clique registra um novo voto no servidor.</p>
+  </div>
+  <div id="aviso" role="alert" aria-live="polite"></div>
+  <section aria-labelledby="tituloRoca" class="mb-5">
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+      <h2 class="h3 mb-0" id="tituloRoca">Na berlinda</h2>
+      <span class="text-secondary small">Votos feitos nesta aba: <strong id="meusVotos">0</strong></span>
+    </div>
+    <div id="listaRoca" class="row row-cols-1 row-cols-md-3 g-4"></div>
+  </section>
+  <section aria-labelledby="tituloOutros">
+    <h2 class="h3 mb-3" id="tituloOutros">Demais participantes</h2>
+    <div id="listaOutros" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4"></div>
+  </section>
+</main>
+      <footer class="py-4 mt-5 bg-dark text-white-50">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2">
+          <span>Som na Final • Projeto didático de DIW</span>
+          <span>Bootstrap 5 + JavaScript + JSON Server</span>
+        </div>
+      </footer>
+    </body>
+    </html>

@@ -1,0 +1,72 @@
+    <!doctype html>
+    <html lang="pt-BR">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Projeto didático de DIW: Bootstrap, Fetch API e JSON Server">
+      <title>Resultado | Som na Final</title>
+      <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <script src="vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+      <script src="js/api.js" defer></script>
+      <script src="js/ui.js" defer></script>
+      <script src="js/resultado.js" defer></script>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">🎵 SOM NA FINAL</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link "  href="index.html">Início</a>
+        <a class="nav-link "  href="votacao.html">Votar</a>
+        <a class="nav-link active" aria-current="page" href="resultado.html">Resultado</a>
+        <a class="nav-link "  href="admin.html">CRUD extra</a>
+      </div>
+    </div>
+  </div>
+</nav>
+      <div class="site-stripe"></div>
+
+<main class="container py-5">
+  <div class="page-heading mb-4">
+    <span class="eyebrow">RESULTADOS</span>
+    <h1 class="display-6 fw-bold">Parcial da eliminação</h1>
+    <p class="text-secondary">Os percentuais são calculados a partir dos registros da API.</p>
+  </div>
+  <div id="aviso" role="alert" aria-live="polite"></div>
+  <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4">
+    <div class="bg-white rounded-3 shadow-sm p-3 border"><span class="text-secondary">Total de votos:</span> <strong id="totalVotos" class="fs-4">0</strong></div>
+    <div class="d-flex gap-2">
+      <button id="atualizar" class="btn btn-outline-dark" type="button">Atualizar</button>
+      <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modalZerar">Zerar votação</button>
+    </div>
+  </div>
+  <div id="listaResultados" aria-live="polite"></div>
+</main>
+<div class="modal fade" id="modalZerar" tabindex="-1" aria-labelledby="modalZerarTitulo" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="modalZerarTitulo">Confirmar exclusão</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">Deseja apagar <strong>todos os votos</strong>? Essa ação não poderá ser desfeita.</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button id="confirmarZerar" type="button" class="btn btn-danger">Sim, zerar votos</button>
+      </div>
+    </div>
+  </div>
+</div>
+      <footer class="py-4 mt-5 bg-dark text-white-50">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2">
+          <span>Som na Final • Projeto didático de DIW</span>
+          <span>Bootstrap 5 + JavaScript + JSON Server</span>
+        </div>
+      </footer>
+    </body>
+    </html>

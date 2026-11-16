@@ -1,0 +1,70 @@
+    <!doctype html>
+    <html lang="pt-BR">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Projeto didático de DIW: Bootstrap, Fetch API e JSON Server">
+      <title>Início | Som na Final</title>
+      <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <script src="vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+      <script src="js/api.js" defer></script>
+      <script src="js/ui.js" defer></script>
+      <script src="js/index.js" defer></script>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">🎵 SOM NA FINAL</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+        <a class="nav-link "  href="votacao.html">Votar</a>
+        <a class="nav-link "  href="resultado.html">Resultado</a>
+        <a class="nav-link "  href="admin.html">CRUD extra</a>
+      </div>
+    </div>
+  </div>
+</nav>
+      <div class="site-stripe"></div>
+
+<main class="container py-5">
+  <div id="aviso" role="alert" aria-live="polite"></div>
+  <div class="row align-items-center g-4 hero-row">
+    <div class="col-md-4 text-center">
+      <img src="img/anfitriao.svg" alt="Apresentador do festival (ilustração)" class="img-fluid rounded-circle hero-portrait shadow-lg">
+    </div>
+    <div class="col-md-8">
+      <div class="card border-0 shadow-lg hero-card">
+        <div class="card-body p-4 p-lg-5">
+          <span class="badge text-bg-warning mb-3">Eliminação ao vivo</span>
+          <h1 class="display-5 fw-bold">Quem deixa o festival?</h1>
+          <p class="lead text-secondary">Escolha um dos participantes que estão na berlinda. Os votos são registrados no JSON Server.</p>
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <a class="btn btn-danger btn-lg" href="votacao.html">Votar agora</a>
+            <a class="btn btn-outline-dark btn-lg" href="resultado.html">Ver parcial</a>
+          </div>
+          <p class="small text-secondary mt-4 mb-0"><strong id="qtdRoca">—</strong> na berlinda • <strong id="qtdFora">—</strong> fora da berlinda</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="mt-5" aria-labelledby="tituloDestaques">
+    <div class="d-flex align-items-center justify-content-between mb-3 gap-2">
+      <h2 class="h3 m-0" id="tituloDestaques">Participantes na berlinda</h2>
+      <a href="votacao.html" class="link-danger fw-semibold">Ver votação</a>
+    </div>
+    <div id="destaques" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4"></div>
+  </section>
+</main>
+      <footer class="py-4 mt-5 bg-dark text-white-50">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2">
+          <span>Som na Final • Projeto didático de DIW</span>
+          <span>Bootstrap 5 + JavaScript + JSON Server</span>
+        </div>
+      </footer>
+    </body>
+    </html>
